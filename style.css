@@ -1,0 +1,37 @@
+body{
+    background-color: #FFEDD5;  
+    text-align: center;
+}
+h1{
+    font-family: bold;
+    font-size: 28px;
+}
+h2{
+    background-color: #fed7aa;
+    font-family: bold;
+    font-size: 18;
+    
+}
+.colorido{
+    color: #995000;
+}
+h3{
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+}
+p{
+    text-align: left; 
+}
+h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+}
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
