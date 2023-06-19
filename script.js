@@ -1,3 +1,4 @@
+function botao(){
 const brunchs = [
     {
       name: "Waffle Morango",
@@ -35,11 +36,38 @@ const brunchs = [
       description: "Para os amantes de um sabor levemente amargo, nossos cookies meio amargo são a escolha ideal. Com a combinação perfeita de doçura e amargor, cada mordida oferece uma experiência equilibrada e única. Os pedaços de chocolate meio amargo derretem na boca, proporcionando uma explosão de sabores intensos e marcantes. Permita-se saborear esses cookies incríveis que vão além do convencional."
     },
   ]
+  var nomewaffle, precowaffle, descwaffle
+  var nomearroz, precoarroz, descarroz
+  var nomemaca, precomaca, descmaca
 
-
+  nomewaffle = document.querySelector("#nomewaffle")
+  precowaffle = document.querySelector("#precowaffle")
+  descwaffle = document.querySelector   ("#descwaffle")
+  nomearroz = document.querySelector("#nomearroz")
+  precoarroz = document.querySelector('#precoarroz')
+  descarroz = document.querySelector('#descarroz')
+  nomemaca = document.querySelector("#nomemaca")
+  precomaca = document.querySelector('#precomaca')
+  descmaca = document.querySelector('#descmaca')
 
 
 
   for(let i = 0; i < brunchs.length; i++){
-    console.log(brunchs[i])
+    if( i == 0){
+      nomewaffle.innerHTML = (brunchs[0]['name'])
+      precowaffle.innerHTML = (brunchs[0]['price'])
+      descwaffle.innerHTML = (brunchs[0]['description'])
+    }
+    else if( i == 1){
+      nomearroz.innerHTML = (brunchs[1]['name'])
+      precoarroz.innerHTML = (brunchs[1]['price'])
+      descarroz.innerHTML = (brunchs[1]['description'])
+    }
+    else if( i == 2){
+      nomemaca.innerHTML = (brunchs[2]['name'])
+      precomaca.innerHTML = (brunchs[2]['price'])
+      descmaca.innerHTML = (brunchs[2]['description'])
+    }
   }
+}
+

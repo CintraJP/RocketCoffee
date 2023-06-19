@@ -5,28 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
+    <button onclick="botao()">troca</button>
     <h1>ROCKET<span class="colorido">COFFEE</span></h1>
-    <h4>aberto todos os dias, 8h-21h</h4>
+    <p class="sub">aberto todos os dias, 8h-21h</p>
     <section>
         <h2>BRUNCH</h2>
         <div class="card">
             <div class="card-header">
-                <h3>WAFFLE DOCE</h3>
-                <p>$37,76</p>
+                <h3 id="nomewaffle">WAFFLE DOCE</h3>
+                <p id="precowaffle">$37,76</p>
             </div>
 
             
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto rem eos labore accusamus similique magni mollitia laudantium obcaecati distinctio, veniam voluptas beatae. Recusandae possimus magni vel id perferendis soluta explicabo.</p>
+            <p id="descwaffle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto rem eos labore accusamus similique magni mollitia laudantium obcaecati distinctio, veniam voluptas beatae. Recusandae possimus magni vel id perferendis soluta explicabo.</p>
         </div>
-        <div>
-            <h3>ARROZ DOCE &#36;23,89 </h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis ad iure culpa! Ab ipsa natus, culpa numquam, dolores quasi asperiores quas voluptatum neque dolorum ex inventore tempore quaerat deserunt!</p>
+        <div class="card">
+            <div class="card-header">
+                <h3 id="nomearroz">ARROZ DOCE</h3>
+                <p id="precoarroz">$37,76</p>
+            </div>
+            <p id="descarroz">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque officiis ad iure culpa! Ab ipsa natus, culpa numquam, dolores quasi asperiores quas voluptatum neque dolorum ex inventore tempore quaerat deserunt!</p>
         </div>
-        <div>
-            <h3>MAÇÃ DOCE &#36;11,98</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste repellendus voluptas quos molestias atque tenetur officiis temporibus quam sunt? Ipsam quos nulla distinctio atque inventore exercitationem autem? Totam, autem mollitia.    
+        <div class="card">
+            <div class="card-header">
+                    <h3 id="nomemaca">MAÇÃ DOCE<h3>
+                    <p id="precomaca">$10,50</p>
+            </div>
+            
+            <p id="descmaca">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste repellendus voluptas quos molestias atque tenetur officiis temporibus quam sunt? Ipsam quos nulla distinctio atque inventore exercitationem autem? Totam, autem mollitia.    
             </p>
         </div>
     </section>

@@ -35,3 +35,7 @@ h4{
     display: flex;
     justify-content: space-between;
 }
+.sub{
+    text-align: center;
+}
+
