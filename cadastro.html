@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro RocketCoffee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="#" id="form">
+        <div>
+            <div class="inputs">
+                <label for="brunch">Nome</label>
+                <input type="text" name="" id="name">
+            </div>
+            <div class="inputs">
+                <label for="price">Preço</label>
+                <input type="text" name="" id="price">
+            </div>
+            <div class="inputs">
+                <label for="desc">Descricão</label>
+                <input type="text" name="" id="desc">
+            </div>
+    
+            <button onclick="card.salvarBrunch()">ADD - Brunch</button>
+            <button onclick="card.salvarBebida()">ADD - Bebidas</button>
+        </div>
+    </form>
+    <h1>ROCKET<span class="colorido">COFFEE</span></h1>
+    <p class="sub">aberto todos os dias, 8h-21h</p>
+    <section>
+        <h2>BRUNCH</h2>
+        <div id="brunchCadastro"></div>
+    </section>
+    <section>
+        <h2>BEBIDAS</h2>
+        <div id="bebidas"></div>
+    </section>
+    
+    
+    
+    <script src="cadastro.js"></script>
+</body>
+</html>
+

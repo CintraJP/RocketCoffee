@@ -1,4 +1,4 @@
-function botao(){
+function cargaInicial(){
 const brunchs = [
     {
       name: "Waffle Morango",
@@ -36,38 +36,81 @@ const brunchs = [
       description: "Para os amantes de um sabor levemente amargo, nossos cookies meio amargo são a escolha ideal. Com a combinação perfeita de doçura e amargor, cada mordida oferece uma experiência equilibrada e única. Os pedaços de chocolate meio amargo derretem na boca, proporcionando uma explosão de sabores intensos e marcantes. Permita-se saborear esses cookies incríveis que vão além do convencional."
     },
   ]
-  var nomewaffle, precowaffle, descwaffle
-  var nomearroz, precoarroz, descarroz
-  var nomemaca, precomaca, descmaca
-
-  nomewaffle = document.querySelector("#nomewaffle")
-  precowaffle = document.querySelector("#precowaffle")
-  descwaffle = document.querySelector   ("#descwaffle")
-  nomearroz = document.querySelector("#nomearroz")
-  precoarroz = document.querySelector('#precoarroz')
-  descarroz = document.querySelector('#descarroz')
-  nomemaca = document.querySelector("#nomemaca")
-  precomaca = document.querySelector('#precomaca')
-  descmaca = document.querySelector('#descmaca')
-
-
-
+  const beverages = [
+    {
+      name: "Espresso",
+      price: 5.50,
+      description: "Experimente a intensidade e a complexidade do nosso espresso, uma bebida clássica que captura a essência do café. Cada gole oferece um sabor rico e encorpado, com um toque de crema dourada na superfície. Deixe-se envolver pelos aromas irresistíveis e desfrute de uma experiência verdadeiramente revigorante."
+    },
+    {
+      name: "Cappuccino",
+      price: 7.80,
+      description: "Deleite-se com a suavidade e a cremosidade do nosso cappuccino. Com a combinação perfeita de café espresso, leite vaporizado e espuma aveludada, essa bebida é um verdadeiro prazer para os sentidos. Cada gole oferece uma harmonia delicada de sabores, com um toque de cacau em pó para finalizar. Permita-se desfrutar de um momento de puro conforto e indulgência."
+    },
+    {
+      name: "Latte Macchiato",
+      price: 8.50,
+      description: "Descubra a elegância e a delicadeza do nosso latte macchiato. Essa bebida sofisticada apresenta camadas distintas de café espresso, leite vaporizado e espuma de leite, criando um visual impressionante e um sabor excepcional. Cada gole é uma experiência suave e equilibrada, com notas sutis de café que se misturam harmoniosamente ao leite. Mime-se com um momento de pura indulgência."
+    },
+    {
+      name: "Mocha",
+      price: 9.20,
+      description: "Perca-se na delícia irresistível do nosso mocha. Essa combinação perfeita de café espresso, leite vaporizado, chocolate e chantilly é um verdadeiro sonho para os amantes do chocolate. Cada gole oferece um sabor envolvente e reconfortante, com a intensidade do café equilibrada pelo doce e cremoso chocolate. Deixe-se envolver por essa tentação de sabores e aproveite um momento de puro prazer."
+    },
+    {
+      name: "Frappuccino",
+      price: 10.90,
+      description: "Refresque-se com o nosso frappuccino, uma bebida gelada e revigorante que combina café espresso, leite, gelo e um toque especial. Cada gole é uma explosão refrescante de sabores, com a textura cremosa e o sabor robusto do café se misturando perfeitamente ao gelo triturado. Desfrute dessa deliciosa indulgência gelada em qualquer momento do dia."
+    },
+    {
+      name: "Chá Gelado",
+      price: 6.50,
+      description: "Desfrute da pureza e do frescor do nosso chá gelado. Feito com chá de alta qualidade, cuidadosamente selecionado, cada gole é uma experiência revigorante e revitalizante. Seja um chá preto tradicional ou uma mistura de sabores frutados, cada opção é uma pausa perfeita para se refrescar e apreciar a serenidade de um sabor suave e natural."
+    }
+  ]
+  let divBrunch = document.querySelector('#brunch')
   for(let i = 0; i < brunchs.length; i++){
-    if( i == 0){
-      nomewaffle.innerHTML = (brunchs[0]['name'])
-      precowaffle.innerHTML = (brunchs[0]['price'])
-      descwaffle.innerHTML = (brunchs[0]['description'])
-    }
-    else if( i == 1){
-      nomearroz.innerHTML = (brunchs[1]['name'])
-      precoarroz.innerHTML = (brunchs[1]['price'])
-      descarroz.innerHTML = (brunchs[1]['description'])
-    }
-    else if( i == 2){
-      nomemaca.innerHTML = (brunchs[2]['name'])
-      precomaca.innerHTML = (brunchs[2]['price'])
-      descmaca.innerHTML = (brunchs[2]['description'])
-    }
+    divBrunch.innerHTML += `
+    <div class="card">
+            <div class="card-header">
+                <h3>${brunchs[i].name}</h3>
+                <p>${brunchs[i].price}</p>
+            </div> 
+            <p>${brunchs[i].description}</p>
+    </div>
+    `
+
   }
+  let divBebidas = document.querySelector('#bebidas') 
+  for(let i =0; i<beverages.length; i++){
+    divBebidas.innerHTML += `
+    <div class="card">
+          <div class="card-header">
+              <h3>${beverages[i].name}</h3>
+              <p>${beverages[i].price}</p>
+          </div>
+          <p>${beverages[i].description}</p>
+    </div>`
+  }
+
+
+
+  //for(let i = 0; i < brunchs.length; i++){
+  //  if( i == 0){
+  //    nomewaffle.innerHTML = (brunchs[0]['name'])
+  //    precowaffle.innerHTML = (brunchs[0]['price'])
+  //    descwaffle.innerHTML = (brunchs[0]['description'])
+  //  }
+  //  else if( i == 1){
+  //    nomearroz.innerHTML = (brunchs[1]['name'])
+  //    precoarroz.innerHTML = (brunchs[1]['price'])
+  //    descarroz.innerHTML = (brunchs[1]['description'])
+  //  }
+  //  else if( i == 2){
+  //    nomemaca.innerHTML = (brunchs[2]['name'])
+  //    precomaca.innerHTML = (brunchs[2]['price'])
+  //    descmaca.innerHTML = (brunchs[2]['description'])
+  //  }
+  //}
 }
 
