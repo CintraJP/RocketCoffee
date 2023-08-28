@@ -3,61 +3,78 @@ class Card{
 
     constructor(){
         
-        this.arrayCards = []
+        this.arrayCardsBebidas = []
+        this.arrayCardsBrunchs = []
     }
 
     salvarBrunch(){
         let produto = this.lerDados()
         if(this.validaCampos(produto)){
-            this.adicionar(produto)
+            this.adicionar(produto, false)
         }
         
         this.listaBrunch()
+        
+        
     }
     salvarBebida(){
         let produto = this.lerDados()
         if(this.validaCampos(produto)){
-            this.adicionar(produto)
+            this.adicionar(produto, true)
+            
         }
         
         this.listaBebidas()
+        
+        
     }
     listaBrunch(){
-        let divCadastro = document.querySelector('#brunchCadastro')
-        divCadastro.innerText = ''
-        for(let i = 0; i<this.arrayCards.length; i++){
+        let divCadastroBrunch = document.querySelector('#brunchCadastro')
+        divCadastroBrunch.innerText = ''
+        for(let i = 0; i<this.arrayCardsBrunchs.length; i++){
             
-            divCadastro.innerHTML +=
+            divCadastroBrunch.innerHTML +=
             `
             <div class="card">
                     <div class="card-header">
-                        <h3>${this.arrayCards[i].name}</h3>
-                        <p>${this.arrayCards[i].price}</p>
+                        <h3>${this.arrayCardsBrunchs[i].name}</h3>
+                        <p>${this.arrayCardsBrunchs[i].price}</p>
                     </div> 
-                    <p>${this.arrayCards[i].description}</p>
+                    <p>${this.arrayCardsBrunchs[i].description}</p>
+                    <button class="btnRemove">Excluir</button>
             </div>
-            `     
+            ` 
+            btnRemove = document.querySelector(".btnRemove")
+            btnRemove.setAttribute("onclick","card.deletar()")
+            this.arrayCardsBrunchs.id = [i]    
             }
+            
     }
     listaBebidas(){
         
-        let divCadastro = document.querySelector('#bebidas')
-        divCadastro.innerText = ''
-        for(let i = 0; i<this.arrayCards.length; i++){
-            divCadastro.innerHTML +=
+        let divCadastroBebidas = document.querySelector('#bebidas')
+        divCadastroBebidas.innerText = ''
+        for(let i = 0; i<this.arrayCardsBebidas.length; i++){
+            divCadastroBebidas.innerHTML +=
             `
             <div class="card">
                     <div class="card-header">
-                        <h3>${this.arrayCards[i].name}</h3>
-                        <p>${this.arrayCards[i].price}</p>
+                        <h3>${this.arrayCardsBebidas[i].name}</h3>
+                        <p>${this.arrayCardsBebidas[i].price}</p>
                     </div> 
-                    <p>${this.arrayCards[i].description}</p>
+                    <p>${this.arrayCardsBebidas[i].description}</p>
             </div>
             `   
+            this.arrayCardsBebidas.id = [i]
             }
     }
-    adicionar(produto){
-        this.arrayCards.push(produto)
+    adicionar(produto, brunchOrBebida){
+        if(brunchOrBebida){
+            this.arrayCardsBebidas.push(produto)
+        }
+        else{
+            this.arrayCardsBrunchs.push(produto)
+        }
         
     }
 
@@ -89,8 +106,15 @@ class Card{
         
         return true
     }
+    deletar(){
+        alert("deletar")
+    }
+    
 }
+let btnRemove 
 
 
 let card = new Card()
+
+
 

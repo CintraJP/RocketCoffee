@@ -68,7 +68,7 @@ const brunchs = [
       description: "Desfrute da pureza e do frescor do nosso chá gelado. Feito com chá de alta qualidade, cuidadosamente selecionado, cada gole é uma experiência revigorante e revitalizante. Seja um chá preto tradicional ou uma mistura de sabores frutados, cada opção é uma pausa perfeita para se refrescar e apreciar a serenidade de um sabor suave e natural."
     }
   ]
-  let divBrunch = document.querySelector('#brunch')
+  let divBrunch = document.querySelector('#brunchCadastro')
   for(let i = 0; i < brunchs.length; i++){
     divBrunch.innerHTML += `
     <div class="card">
@@ -77,6 +77,7 @@ const brunchs = [
                 <p>${brunchs[i].price}</p>
             </div> 
             <p>${brunchs[i].description}</p>
+            
     </div>
     `
 
@@ -92,25 +93,5 @@ const brunchs = [
           <p>${beverages[i].description}</p>
     </div>`
   }
-
-
-
-  //for(let i = 0; i < brunchs.length; i++){
-  //  if( i == 0){
-  //    nomewaffle.innerHTML = (brunchs[0]['name'])
-  //    precowaffle.innerHTML = (brunchs[0]['price'])
-  //    descwaffle.innerHTML = (brunchs[0]['description'])
-  //  }
-  //  else if( i == 1){
-  //    nomearroz.innerHTML = (brunchs[1]['name'])
-  //    precoarroz.innerHTML = (brunchs[1]['price'])
-  //    descarroz.innerHTML = (brunchs[1]['description'])
-  //  }
-  //  else if( i == 2){
-  //    nomemaca.innerHTML = (brunchs[2]['name'])
-  //    precomaca.innerHTML = (brunchs[2]['price'])
-  //    descmaca.innerHTML = (brunchs[2]['description'])
-  //  }
-  //}
 }
 
