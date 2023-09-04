@@ -5,12 +5,15 @@ class Card{
         
         this.arrayCardsBebidas = []
         this.arrayCardsBrunchs = []
+        this.idBebidas = 0
+        this.idBrunchs = 0
     }
 
     salvarBrunch(){
         let produto = this.lerDados()
         if(this.validaCampos(produto)){
             this.adicionar(produto, false)
+            this.arrayCardsBrunchs.id++
         }
         
         this.listaBrunch()
@@ -21,6 +24,7 @@ class Card{
         let produto = this.lerDados()
         if(this.validaCampos(produto)){
             this.adicionar(produto, true)
+            this.arrayCardsBebidas.id++
             
         }
         
@@ -41,12 +45,10 @@ class Card{
                         <p>${this.arrayCardsBrunchs[i].price}</p>
                     </div> 
                     <p>${this.arrayCardsBrunchs[i].description}</p>
-                    <button class="btnRemove">Excluir</button>
+                    <button class="btnRemove" onclick="card.deletar(${this.idBrunchs}, true)">Excluir</button>
             </div>
-            ` 
-            btnRemove = document.querySelector(".btnRemove")
-            btnRemove.setAttribute("onclick","card.deletar()")
-            this.arrayCardsBrunchs.id = [i]    
+            `
+                console.log(this.idBrunchs)
             }
             
     }
@@ -57,29 +59,34 @@ class Card{
         for(let i = 0; i<this.arrayCardsBebidas.length; i++){
             divCadastroBebidas.innerHTML +=
             `
-            <div class="card">
+            <div class="card" id = "${this.idBebidas}">
                     <div class="card-header">
                         <h3>${this.arrayCardsBebidas[i].name}</h3>
                         <p>${this.arrayCardsBebidas[i].price}</p>
                     </div> 
                     <p>${this.arrayCardsBebidas[i].description}</p>
+                    <button class="btnRemove" onclick="card.deletar(${this.idBebidas}, false)">Excluir</button>
             </div>
-            `   
-            this.arrayCardsBebidas.id = [i]
+            ` 
+            console.log(this.idBebidas)
+            
             }
     }
     adicionar(produto, brunchOrBebida){
         if(brunchOrBebida){
             this.arrayCardsBebidas.push(produto)
+            this.idBebidas++
         }
         else{
             this.arrayCardsBrunchs.push(produto)
+            this.idBrunchs++
         }
         
     }
 
     lerDados(){
         let produto = {}
+        
         produto.name  = document.getElementById("name").value
         produto.price = document.getElementById("price").value
         produto.description = document.getElementById("desc").value
@@ -106,8 +113,24 @@ class Card{
         
         return true
     }
-    deletar(){
-        alert("deletar")
+    deletar(id, bebidaOrBrunch){
+        if(bebidaOrBrunch == true){
+            for(let i = 0; i<this.arrayCardsBrunchs.length; i++){
+                if(this.arrayCardsBrunchs[i] = id){
+                    this.arrayCardsBrunchs.splice(i, 1)
+                }
+            }
+        }
+        if(bebidaOrBrunch == false){
+            for(let i = 0; i<this.arrayCardsBebidas.length; i++){
+                if(this.arrayCardsBebidas[i] = id){
+                    this.arrayCardsBebidas.splice(i, 1)
+                    var removeDiv = document.getElementById(this.idBebidas)
+                    console.log(removeDiv)
+                    removeDiv.parentNode.removeChild(removeDiv)
+                }
+            }
+        }
     }
     
 }
