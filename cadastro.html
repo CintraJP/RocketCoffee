@@ -5,25 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro RocketCoffee</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron&family=Prompt:wght@100;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <form action="#" id="form">
         <div>
             <div class="inputs">
-                <label for="brunch">Nome</label>
+                <label for="brunch">Nome:</label>
                 <input type="text" name="" id="name">
             </div>
             <div class="inputs">
-                <label for="price">Preço</label>
+                <label for="price">Preço:</label>
                 <input type="text" name="" id="price">
             </div>
             <div class="inputs">
-                <label for="desc">Descricão</label>
+                <label for="desc" id="labelDesc">Descrição:</label>
                 <input type="text" name="" id="desc">
             </div>
     
-            <button onclick="card.salvarBrunch()">ADD - Brunch</button>
-            <button onclick="card.salvarBebida()">ADD - Bebidas</button>
+            <button onclick="card.salvarBrunch()" class="btnADD">Adicionar<br>Brunch</button>
+            <button onclick="card.salvarBebida()" class="btnADD">Adicionar<br>Bebida</button>
         </div>
     </form>
     <h1>ROCKET<span class="colorido">COFFEE</span></h1>

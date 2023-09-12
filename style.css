@@ -38,4 +38,55 @@ h4{
 .sub{
     text-align: center;
 }
+.inputs {
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    font-weight:bold;
+    font-size: 15px;
+} 
+ 
+#name, #price, #desc,::placeholder{
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border-width: 0.5px;
+    text-align: center;
+    background-color: #e9e4df;
+    
+}
+#name{
+    margin-left: 4px;
+}
+#price{
+    margin-left: 7px;
+}
+
+.btnRemove{
+    outline-color: red;
+    cursor: pointer;
+    transition: background .3s;
+    border-radius: 8px;
+    padding: 10px;
+    margin-left: 1200px;
+    
+}
+.btnRemove:hover{
+    background-color: rgba(180, 19, 19, 0.89);
+}
+.btnADD{
+    border-radius: 8px;
+    padding: 5px;
+    background-color: rgba(218, 215, 197, 0.788);
+    color:#362106;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    transition: background .3s;
+}
+.btnADD:hover{
+    background-color: rgb(16, 158, 111);
+}
 
